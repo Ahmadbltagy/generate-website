@@ -49,7 +49,9 @@ class Header{
         }
         void generateCode(vector <string> pageName){
             
-            cssCode += ".header-td {border: 1px solid white; color: white; text-align: center; font-size: 20px;}";
+            cssCode  = ".header-table {width =80%; margin-left: auto; margin-right: auto;}";
+            cssCode += ".header-td {border: 2px solid black; color: black; text-align: center; font-size: 20px;}";
+            
             
             htmlCode = "<table class=\"header-table\">";
             if(headerNum == 1){
@@ -66,7 +68,6 @@ class Header{
                 htmlCode += "<td class=\"header-td\"> " + pageName[i] +  "</td>";
             htmlCode += "</tr></table>";
 
-            cssCode  = ".header-table {width =80%; margin-left: auto; margin-right: auto;}  .header-td{color: black;}";
             
             
             
