@@ -50,7 +50,7 @@ class Header{
         void generateCode(vector <string> pageName){
             
             cssCode  = ".header-table {width =80%; margin-left: auto; margin-right: auto;}";
-            cssCode += ".header-td {border: 2px solid black; color: black; text-align: center; font-size: 20px;}";
+            cssCode += ".header-td {border: 2px solid black; color: black; text-align: center; font-size: 20px;} .header-a{text-decoration: none; color: black;}";
             
             
             htmlCode = "<table class=\"header-table\">";
@@ -60,12 +60,13 @@ class Header{
                 cin>> imgFileName;   
                 htmlCode += "<tr> <td class=\"header-td\" colspan=\" " +intToString(pageName.size()) + "\"> <img class=\"header-img\" src=\" " +imgFileName+  " \">"   +"</td>  </tr>";
 
-                cssCode += ".header-img {width: 100%; height: auto;}";
+                cssCode += ".header-img {width: 100%; height: auto;} ";
             }
             htmlCode += "<tr>";
             //table content
-            for(int i = 0; i < pageName.size(); i++)
-                htmlCode += "<td class=\"header-td\"> " + pageName[i] +  "</td>";
+            htmlCode += "<td class=\"header-td\"> <a class=\"header-a\" href=\"index.html\">"  + pageName[0] +  "</a> </td>";
+            for(int i = 1; i < pageName.size(); i++)
+                htmlCode += "<td class=\"header-td\"> <a class=\"header-a\" href=\"" + pageName[i]+ ".html\">"  + pageName[i] +  "</td>";
             htmlCode += "</tr></table>";
 
             
@@ -80,20 +81,3 @@ class Header{
         }
     
 };
-
-
-
-int main(){
-    ofstream htmlFile("index.html");
-
-    Header h;
-    vector<string> x = {"Home", "Courses", "Blog", "Contacts"};
-
-    h.chooseHeader(x);
-
-    htmlFile <<"<html><head><title>Test</title><style>" << h.getCss() << "</style></head>";
-    htmlFile << "<body>" << h.getHtml() <<"</body> </html>";
-    htmlFile.close();
-    
-}
-
