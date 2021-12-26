@@ -14,12 +14,12 @@ public:
     {
         cout << "Footer 1: \n"
                 "---------------------------------------------------\n"
-                "         (websiteName) all rights reserved         \n"
+                "|        (websiteName) all rights reserved        |\n"
                 "---------------------------------------------------\n"
                 "Footer 2: \n"
                 "---------------------------------------------------\n"
-                "             (Footer background color)             \n"
-                "         (websiteName) all rights reserved         \n"
+                "|            (Footer background color)            |\n"
+                "|        (websiteName) all rights reserved        |\n"
                 "---------------------------------------------------\n";
 
         int footerNumber;
@@ -55,4 +55,3 @@ public:
     }
 };
 
-    
