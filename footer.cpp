@@ -55,17 +55,4 @@ public:
     }
 };
 
-int main(void)
-{
-    Footer f;
-    string websiteName;
-    cout << "Enter yout website name: ";
-    cin >> websiteName;
-    f.chooseFooter(websiteName);
-    ofstream html("index.html");
-
-    html << f.getCss();
-    html << f.getHtml();
-
-     html.close();
-}
+    
