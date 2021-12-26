@@ -52,13 +52,3 @@ public:
         return htmlCode;
     }
 };
-
-int main()
-{
-    Page p;
-    ofstream html("index.html");
-    p.choosePage();
-    html << p.getHtml();
-
-    html.close();
-}
