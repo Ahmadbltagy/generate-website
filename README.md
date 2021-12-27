@@ -1,1 +1,1 @@
-By this programe you can generat a simple website.
+By this program you can generat a simple website.
