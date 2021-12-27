@@ -20,9 +20,9 @@ int main(void){
     ofstream html(path + "\\website\\index.html");
     ofstream css(path + "\\website\\style.css");
     
-    h.chooseHeader({"Home", "Blog", "Contact"});
+    h.chooseHeader({"Home", "Blog", "Contact", "About"});
     p.choosePage();
-    f.chooseFooter("Ahmad Tiga");
+    f.chooseFooter("dots tech ");
 
     css << "body {text-align: center; background-color: teal;}";
     css << h.getCss();

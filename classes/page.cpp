@@ -27,11 +27,12 @@ public:
     void generateCode(int pageNumber)
     {
         htmlCode = "<main> <center><table>  ";
-        more:
+        cssCode = "main {margin: 50px 0;}";
+
         string videoLink;
+        more:
         cout << "Type the link of video: ";
         cin >> videoLink;
-        cssCode = "main {margin: 50px 0;}";
         htmlCode += "<tr> <td><iframe width=\"auto\" height=\"auto\" src=\"https://www.youtube.com/embed/" + videoLink + "\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></td>";
         if (pageNumber == 1)
         {
