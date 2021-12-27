@@ -31,7 +31,7 @@ public:
         htmlCode = "<footer> <p>";
         htmlCode += websiteName;
         htmlCode += " all rights reserved </p> </footer>";                  
-        cssCode = "<head><style>footer{text-align: center; font-size: 60px;   border-radius: 10px; ";
+        cssCode = "footer{  position: fixed  ; bottom: 0; width: 99%; border-radius: 10px; ";
         if (footerNumber == 2)
         {
             string backFooterColor, textFooterColor;
@@ -42,7 +42,7 @@ public:
             cssCode += "background-color: " + backFooterColor;
             cssCode += "; color: " + textFooterColor + ";";
         }
-        cssCode += "}</style></head>";
+        cssCode += "}";
     }
     string getHtml()
     {

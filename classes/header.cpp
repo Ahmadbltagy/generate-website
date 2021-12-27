@@ -54,10 +54,10 @@ public:
     void generateCode(vector<string> pageName)
     {
 
-        cssCode = ".header-table {width =80%; margin-left: auto; margin-right: auto;}";
+        cssCode = ".header-table {width:80%; margin-left: auto; margin-right: auto;}";
         cssCode += ".header-td {border: 2px solid black; color: black; text-align: center; font-size: 20px;} .header-a{text-decoration: none; color: black;}";
 
-        htmlCode = "<table class=\"header-table\">";
+        htmlCode = "<header> <table class=\"header-table\">";
         if (headerNum == 1)
         {
             string imgFileName;
@@ -65,14 +65,14 @@ public:
             cin >> imgFileName;
             htmlCode += "<tr> <td class=\"header-td\" colspan=\" " + intToString(pageName.size()) + "\"> <img class=\"header-img\" src=\" " + imgFileName + " \">" + "</td>  </tr>";
 
-            cssCode += ".header-img {width: 100%; height: auto;} ";
+            cssCode += ".header-img {width: 100%; height: 200px;} ";
         }
         htmlCode += "<tr>";
         //table content
         htmlCode += "<td class=\"header-td\"> <a class=\"header-a\" href=\"index.html\">" + pageName[0] + "</a> </td>";
         for (int i = 1; i < pageName.size(); i++)
-            htmlCode += "<td class=\"header-td\"> <a class=\"header-a\" href=\"" + pageName[i] + ".html\">" + pageName[i] + "</td>";
-        htmlCode += "</tr></table>";
+            htmlCode += "<td class=\"header-td\"> <a class=\"header-a\" href=\"" + pageName[i] + ".html\">" + pageName[i] + "</a></td>";
+        htmlCode += "</tr></table> </header>";
     }
     string getHtml()
     {
